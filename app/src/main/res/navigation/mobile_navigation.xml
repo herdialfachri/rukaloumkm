@@ -11,13 +11,11 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home">
         <action
+            android:id="@+id/action_navigation_home_to_detailActivity"
+            app:destination="@id/detailActivity" />
+        <action
             android:id="@+id/action_navigation_home_to_navigation_resep"
             app:destination="@id/navigation_resep" />
-        <action
-            android:id="@+id/action_navigation_home_to_navigation_profil"
-            app:destination="@id/navigation_profil"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
     </fragment>
 
     <fragment
@@ -33,8 +31,8 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <action
-            android:id="@+id/action_navigation_resep_to_navigation_home"
-            app:destination="@id/navigation_home" />
+            android:id="@+id/action_navigation_resep_to_navigation_profil"
+            app:destination="@id/navigation_profil" />
     </fragment>
 
     <fragment
@@ -45,58 +43,37 @@
         <action
             android:id="@+id/action_navigation_profil_to_aboutFragment"
             app:destination="@id/aboutFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
         <action
             android:id="@+id/action_navigation_profil_to_kontakFragment"
             app:destination="@id/kontakFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
         <action
             android:id="@+id/action_navigation_profil_to_shareFragment"
             app:destination="@id/shareFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
         <action
             android:id="@+id/action_navigation_profil_to_loginActivity"
             app:destination="@id/loginActivity" />
-        <action
-            android:id="@+id/action_navigation_profil_to_navigation_home"
-            app:destination="@id/navigation_home" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.herdialfachri.rukaloumkm.ui.profile.tentang.AboutFragment"
         android:label="fragment_about"
-        tools:layout="@layout/fragment_about" >
-        <action
-            android:id="@+id/action_aboutFragment_to_navigation_profil"
-            app:destination="@id/navigation_profil" />
-    </fragment>
+        tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/kontakFragment"
         android:name="com.herdialfachri.rukaloumkm.ui.profile.kontak.KontakFragment"
         android:label="fragment_kontak"
-        tools:layout="@layout/fragment_kontak" >
-        <action
-            android:id="@+id/action_kontakFragment_to_navigation_profil"
-            app:destination="@id/navigation_profil" />
-    </fragment>
+        tools:layout="@layout/fragment_kontak" />
     <fragment
         android:id="@+id/shareFragment"
         android:name="com.herdialfachri.rukaloumkm.ui.profile.undang.ShareFragment"
         android:label="fragment_share"
-        tools:layout="@layout/fragment_share" >
-        <action
-            android:id="@+id/action_shareFragment_to_navigation_profil"
-            app:destination="@id/navigation_profil" />
-    </fragment>
+        tools:layout="@layout/fragment_share" />
     <activity
         android:id="@+id/loginActivity"
         android:name="com.herdialfachri.rukaloumkm.login.LoginActivity"
@@ -107,4 +84,9 @@
         android:name="com.herdialfachri.rukaloumkm.ui.dashboard.DetailActivity2"
         android:label="activity_detail2"
         tools:layout="@layout/activity_detail2" />
+    <activity
+        android:id="@+id/detailActivity"
+        android:name="com.herdialfachri.rukaloumkm.ui.home.DetailActivity"
+        android:label="activity_detail"
+        tools:layout="@layout/activity_detail" />
 </navigation>

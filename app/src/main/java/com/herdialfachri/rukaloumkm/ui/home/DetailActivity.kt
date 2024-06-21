@@ -27,9 +27,9 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var detailSeller: TextView
     private lateinit var detailProduk: TextView
     private lateinit var detailAlamat: TextView
-    private lateinit var deleteButton: FloatingActionButton
-    private lateinit var editButton: FloatingActionButton
-    private lateinit var mainFab: FloatingActionMenu
+//    private lateinit var deleteButton: FloatingActionButton
+//    private lateinit var editButton: FloatingActionButton
+//    private lateinit var mainFab: FloatingActionMenu
     private var key: String = ""
     private var imageUrl: String = ""
     private var whatsappNumber: String = ""
@@ -45,10 +45,10 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         detailSeller = findViewById(R.id.detailSeller)
         detailProduk = findViewById(R.id.detailProduk)
         detailAlamat = findViewById(R.id.detailAlamat)
-        deleteButton = findViewById(R.id.deleteButton)
-        editButton = findViewById(R.id.editButton)
+//        deleteButton = findViewById(R.id.deleteButton)
+//        editButton = findViewById(R.id.editButton)
 
-        mainFab = findViewById(R.id.mainFab)
+//        mainFab = findViewById(R.id.mainFab)
 
         intent.extras?.let { bundle ->
             whatsappNumber = bundle.getString("Description") ?: ""
@@ -62,43 +62,43 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
             Glide.with(this).load(imageUrl).into(detailImage)
         }
 
-        // Amati status autentikasi pengguna
-        val auth = FirebaseAuth.getInstance()
-        val currentUser = auth.currentUser
-        if (currentUser == null) {
-            // User belum login, sembunyikan FloatingActionMenu
-            mainFab.visibility = View.GONE
-        } else {
-            // User sudah login, tampilkan FloatingActionMenu
-            mainFab.visibility = View.VISIBLE
-        }
+//        // Amati status autentikasi pengguna
+//        val auth = FirebaseAuth.getInstance()
+//        val currentUser = auth.currentUser
+//        if (currentUser == null) {
+//            // User belum login, sembunyikan FloatingActionMenu
+//            mainFab.visibility = View.GONE
+//        } else {
+//            // User sudah login, tampilkan FloatingActionMenu
+//            mainFab.visibility = View.VISIBLE
+//        }
 
-        deleteButton.setOnClickListener {
-            val reference = FirebaseDatabase.getInstance().getReference("Product")
-            val storage = FirebaseStorage.getInstance()
-
-            val storageReference = storage.getReferenceFromUrl(imageUrl)
-            storageReference.delete().addOnSuccessListener {
-                reference.child(key).removeValue()
-                Toast.makeText(this, "Deleted", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(applicationContext, MainActivity::class.java))
-                finish()
-            }
-        }
-
-        editButton.setOnClickListener {
-            val intent = Intent(this, UpdateActivity::class.java).apply {
-                putExtra("Description", detailDesc.text.toString())
-                putExtra("Title", detailTitle.text.toString())
-                putExtra("Language", detailLang.text.toString())
-                putExtra("Image", imageUrl)
-                putExtra("Seller", detailSeller.text.toString())
-                putExtra("Produk", detailProduk.text.toString())
-                putExtra("Alamat", detailAlamat.text.toString())
-                putExtra("Key", key)
-            }
-            startActivity(intent)
-        }
+//        deleteButton.setOnClickListener {
+//            val reference = FirebaseDatabase.getInstance().getReference("Product")
+//            val storage = FirebaseStorage.getInstance()
+//
+//            val storageReference = storage.getReferenceFromUrl(imageUrl)
+//            storageReference.delete().addOnSuccessListener {
+//                reference.child(key).removeValue()
+//                Toast.makeText(this, "Deleted", Toast.LENGTH_SHORT).show()
+//                startActivity(Intent(applicationContext, MainActivity::class.java))
+//                finish()
+//            }
+//        }
+//
+//        editButton.setOnClickListener {
+//            val intent = Intent(this, UpdateActivity::class.java).apply {
+//                putExtra("Description", detailDesc.text.toString())
+//                putExtra("Title", detailTitle.text.toString())
+//                putExtra("Language", detailLang.text.toString())
+//                putExtra("Image", imageUrl)
+//                putExtra("Seller", detailSeller.text.toString())
+//                putExtra("Produk", detailProduk.text.toString())
+//                putExtra("Alamat", detailAlamat.text.toString())
+//                putExtra("Key", key)
+//            }
+//            startActivity(intent)
+//        }
 
         // Set listener untuk tombol detailDesc
         detailDesc.setOnClickListener(this)

@@ -59,7 +59,7 @@ class KontakFragment : Fragment(), View.OnClickListener {
 
         when (v.id) {
             R.id.btn_email -> {
-                val namaEmail = "mherdialfachri@ummi.ac.id"
+                val namaEmail = "desapalasarigirang@gmail.com"
                 val bukaEmail = Intent(Intent.ACTION_VIEW, Uri.parse("mailto:$namaEmail"))
                 startActivity(bukaEmail)
             }
@@ -80,7 +80,7 @@ class KontakFragment : Fragment(), View.OnClickListener {
             }
 
             R.id.btn_facebook -> {
-                val facebookProfile = "http://instagram.com/rukalo.id"
+                val facebookProfile = "http://instagram.com/pemdespalasarigirang/"
                 val bukaFacebook = Intent(Intent.ACTION_VIEW, Uri.parse(facebookProfile))
                 startActivity(bukaFacebook)
             }

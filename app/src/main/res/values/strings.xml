@@ -21,7 +21,7 @@
     <string name="tentang_kami">Tentang Kami</string>
     <string name="isi_aplikasi_rukalo">Aplikasi Rukalo adalah sebuah platform digital yang dirancang khusus untuk membantu pelaku Usaha Mikro, Kecil, dan Menengah (UMKM) dalam mengelola dan memasarkan produk-produk mereka secara efektif. Dengan menggunakan Rukalo, pengguna dapat memanfaatkan berbagai fitur yang mendukung dalam meningkatkan visibilitas dan penjualan produk UMKM mereka. Salah satu fitur utama dari Aplikasi Rukalo adalah kemampuannya dalam pemasaran produk. Melalui platform ini, para pemilik UMKM dapat mempromosikan produk mereka kepada target pasar yang tepat, meningkatkan eksposur, dan mengoptimalkan strategi pemasaran untuk mencapai hasil yang lebih baik.</string>
     <string name="hubungi_kami">Hubungi Kami</string>
-    <string name="email">Email</string>
+    <string name="email">Email*</string>
     <string name="website">Website</string>
     <string name="daftar_sekarang">Daftar sekarang</string>
     <string name="masuk">Masuk</string>
@@ -33,10 +33,10 @@
     <string name="share_desc">Ayo bagiin aplikasi Rukalo ke temen kamu dengan mengklik tombol dibawah!</string>
     <string name="foto_bagikan_aplikasi">foto bagikan aplikasi</string>
     <string name="share">Bagikan</string>
-    <string name="seller">Apa kamu penjual? Daftar</string>
-    <string name="lupa_kata_sandi">Lupa Kata Sandi?</string>
-    <string name="kata_sandi">Kata Sandi</string>
-    <string name="welcome_to_rukalo">Welcome to Rukalo!</string>
+    <string name="seller">Ayo Daftar</string>
+    <string name="lupa_kata_sandi">Lupa Sandi?</string>
+    <string name="kata_sandi">Kata Sandi*</string>
+    <string name="welcome_to_rukalo">Selamat Datang</string>
     <string name="desc_lengkap">Ayo temukan dan tentukan makanan favoritmu. Kami akan selalu membantumu kapanpun dan dimanapun!</string>
     <string name="gambar_logo_rukalo">gambar logo rukalo</string>
     <string name="gambar_slider">gambar slider</string>
@@ -126,4 +126,5 @@
     <string name="produk_unggulan">Produk Unggulan</string>
     <string name="find_product">Temukan produk kesukaanmu kamu disini</string>
     <string name="loading">Loading...</string>
+    <string name="selengkapnya">Selengkapnya..</string>
 </resources>

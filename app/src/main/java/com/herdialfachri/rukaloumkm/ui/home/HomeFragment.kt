@@ -1,10 +1,12 @@
 package com.herdialfachri.rukaloumkm.ui.home
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -23,6 +25,7 @@ class HomeFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: MyAdapter
     private lateinit var searchView: SearchView
+    private lateinit var tvSelengkapnya: TextView
     private val viewModel: HomeViewModel by viewModels()
     private var dataList = mutableListOf<DataClass>()
     private var originalList = mutableListOf<DataClass>()
@@ -41,6 +44,7 @@ class HomeFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recyclerView)
         fab = view.findViewById(R.id.fab)
         searchView = view.findViewById(R.id.search)
+        tvSelengkapnya = view.findViewById(R.id.tvMore)
 
         val gridLayoutManager = GridLayoutManager(requireContext(), 2)
         recyclerView.layoutManager = gridLayoutManager
@@ -55,6 +59,13 @@ class HomeFragment : Fragment() {
 
         auth.addAuthStateListener { firebaseAuth ->
             updateFabVisibility(firebaseAuth.currentUser)
+        }
+
+        tvSelengkapnya.setOnClickListener {
+            val url = "https://www.pemdespalasarigirang.id/#posts"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
         }
 
         fab.setOnClickListener {
