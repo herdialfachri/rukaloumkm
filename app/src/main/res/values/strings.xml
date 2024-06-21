@@ -1,0 +1,129 @@
+<resources>
+    <string name="app_name">Rukalo</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_resep">Resep</string>
+    <string name="title_cari">Cari</string>
+    <string name="title_profil">Profil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="test">test</string>
+    <string name="profil_tv">Profile</string>
+    <string name="masuk_akun">Masuk akun</string>
+    <string name="seputar_aplikasi">Seputar Aplikasi</string>
+    <string name="hubungi_desa_palasari_girang">Hubungi Desa Palasari Girang</string>
+    <string name="sosial_media">Email, Whatsapp, Wesbite</string>
+    <string name="gambar_pesan">gambar pesan</string>
+    <string name="gambar_arrow">gambar arrow</string>
+    <string name="gambar_tanda_tanya">gambar tanda tanya</string>
+    <string name="rukalo">Rukalo</string>
+    <string name="versi">Versi 1.0</string>
+    <string name="tentang_kami">Tentang Kami</string>
+    <string name="isi_aplikasi_rukalo">Aplikasi Rukalo adalah sebuah platform digital yang dirancang khusus untuk membantu pelaku Usaha Mikro, Kecil, dan Menengah (UMKM) dalam mengelola dan memasarkan produk-produk mereka secara efektif. Dengan menggunakan Rukalo, pengguna dapat memanfaatkan berbagai fitur yang mendukung dalam meningkatkan visibilitas dan penjualan produk UMKM mereka. Salah satu fitur utama dari Aplikasi Rukalo adalah kemampuannya dalam pemasaran produk. Melalui platform ini, para pemilik UMKM dapat mempromosikan produk mereka kepada target pasar yang tepat, meningkatkan eksposur, dan mengoptimalkan strategi pemasaran untuk mencapai hasil yang lebih baik.</string>
+    <string name="hubungi_kami">Hubungi Kami</string>
+    <string name="email">Email</string>
+    <string name="website">Website</string>
+    <string name="daftar_sekarang">Daftar sekarang</string>
+    <string name="masuk">Masuk</string>
+    <string name="keluar">Keluar</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="sosmed">Sosial Media</string>
+    <string name="facebook">Facebook</string>
+    <string name="halo_foodies">Halo Foodies!</string>
+    <string name="share_desc">Ayo bagiin aplikasi Rukalo ke temen kamu dengan mengklik tombol dibawah!</string>
+    <string name="foto_bagikan_aplikasi">foto bagikan aplikasi</string>
+    <string name="share">Bagikan</string>
+    <string name="seller">Apa kamu penjual? Daftar</string>
+    <string name="lupa_kata_sandi">Lupa Kata Sandi?</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="welcome_to_rukalo">Welcome to Rukalo!</string>
+    <string name="desc_lengkap">Ayo temukan dan tentukan makanan favoritmu. Kami akan selalu membantumu kapanpun dan dimanapun!</string>
+    <string name="gambar_logo_rukalo">gambar logo rukalo</string>
+    <string name="gambar_slider">gambar slider</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="reset_kata_sandi">Reset kata sandi</string>
+    <string name="enter_email">Masukkan email yang terdaftar</string>
+    <string name="kembali">kembali</string>
+    <string name="reset">Reset</string>
+    <string name="gambar_splash_screen">gambar splash screen</string>
+    <string name="resep">Resep</string>
+    <string name="ummi">UMMI Sukabumi</string>
+    <string name="presented_by">Presented by</string>
+    <string name="cara_menggunakan_aplikasi">Cara Menggunakan Aplikasi</string>
+    <string name="cara_mendaftar_cara_membeli_cara_masuk">Cara mendaftar, cara membeli, cara masuk</string>
+    <string name="tombol_arrow_enter">tombol arrow enter</string>
+    <string name="tombol_keterangan">tombol keterangan</string>
+    <string name="hak_cipta_aplikasi">Hak Cipta Aplikasi</string>
+    <string name="nomor_haki_status_pendaftaran_hak_cipta">Nomor Haki, Status Pendaftaran Hak Cipta</string>
+    <string name="informasi_lainnya">Informasi Lainnya</string>
+    <string name="undang_teman">Undang Teman</string>
+    <string name="cara_mengundang_teman">Cara mengundang teman</string>
+    <string name="tentang_aplikasi_rukalo">Tentang Aplikasi Rukalo</string>
+    <string name="gambar_ummi">gambar ummi</string>
+    <string name="gambar_recyclerview">gambar recyclerview</string>
+    <string name="nama_makanan">Nama makanan</string>
+    <string name="deskripsi">Deskripsi</string>
+
+    <!--    recyclerview-->
+    <string name="seblakbandung">Seblak Bandung adalah salah satu kuliner khas Kota Bandung yang terkenal dengan
+        rasa pedas dan gurihnya. Seblak terdiri dari berbagai bahan seperti kerupuk basah, mie, sayuran, telur, dan
+        daging yang dimasak dalam kuah pedas berbumbu kencur dan bawang.</string>
+    <string name="mienyemek">Mie nyemek adalah hidangan mi yang terkenal di Indonesia, terutama di daerah Jawa.
+        Mie ini merupakan perpaduan antara mi goreng dan mi kuah, menciptakan tekstur yang lembap dan sedikit berkuah.
+        Dengan bumbu yang kaya akan rasa gurih, manis, dan pedas.</string>
+    <string name="tahuwalik">Tahu walik adalah camilan khas dari Banyuwangi, Jawa Timur, yang terkenal karena keunikannya.
+        Nama "walik" berarti terbalik, dan sesuai namanya, tahu ini diolah dengan cara membalik bagian dalam tahu menjadi
+        bagian luar, kemudian diisi dengan adonan daging ayam atau ikan yang gurih.</string>
+    <string name="rotisandwich">Roti toast sandwich adalah hidangan sederhana namun lezat yang terdiri dari roti panggang diisi
+        dengan berbagai bahan pilihan. Kombinasi isian seperti daging, keju, sayuran segar, dan saus memberikan cita rasa yang
+        kaya dan beragam. Roti yang dipanggang hingga renyah menambah tekstur yang menggugah selera.</string>
+    <string name="cookies">Cookies adalah makanan ringan berbentuk bulat pipih yang umumnya dibuat dari campuran tepung, gula, mentega,
+        dan telur. Mereka sering kali dilengkapi dengan berbagai tambahan seperti cokelat, kacang, atau buah kering untuk memberikan variasi
+        rasa dan tekstur.</string>
+    <string name="ciskek">Cheesecake adalah hidangan penutup yang lezat dan terkenal di seluruh dunia. Terbuat dari lapisan dasar yang
+        biasanya terdiri dari remah biskuit, dan lapisan atas yang lembut dan creamy dari campuran keju krim, telur, dan gula, cheesecake
+        menawarkan rasa yang kaya dan tekstur yang halus.</string>
+    <string name="saladsayur">Salad sayur adalah hidangan sehat dan menyegarkan yang terdiri dari berbagai macam sayuran segar seperti selada,
+        tomat, mentimun, wortel, dan paprika. Dikombinasikan dengan dressing yang lezat seperti vinaigrette, minyak zaitun, atau saus berbasis
+        yogurt, salad sayur tidak hanya kaya akan serat, vitamin, dan mineral, tetapi juga menawarkan rasa yang nikmat dan tekstur yang beragam.</string>
+    <string name="chickenwings">Chicken wings, atau sayap ayam, adalah hidangan lezat yang populer di berbagai belahan dunia. Sayap ayam sering kali
+        dipanggang, digoreng, atau dibakar dengan berbagai bumbu dan saus yang menggugah selera. Teksturnya yang renyah di luar dan lembut di dalam
+        membuatnya menjadi favorit banyak orang. Chicken wings biasanya disajikan dengan saus celup seperti saus barbeque, saus pedas, atau saus keju,
+        yang menambah kenikmatan rasa.</string>
+    <string name="dimsum">Dimsum adalah hidangan tradisional Tiongkok yang terdiri dari berbagai macam makanan ringan yang biasanya disajikan dalam porsi
+        kecil. Disajikan dalam keranjang bambu atau piring kecil, dimsum mencakup berbagai jenis pangsit, roti, dan makanan laut, baik dikukus, digoreng,
+        maupun dipanggang.</string>
+    <string name="makaroni">Macaroni schotel adalah hidangan khas yang populer di Indonesia, terutama sebagai menu pesta atau acara khusus. Hidangan
+        ini terbuat dari macaroni yang dimasak dengan campuran saus creamy, biasanya berbahan dasar susu atau keju, yang kemudian dipanggang
+        hingga berwarna keemasan. Sering kali, macaroni schotel diperkaya dengan bahan tambahan seperti daging sapi cincang, ayam, atau sosis,
+        serta sayuran seperti wortel dan kacang polong.</string>
+    <string name="martabakmini">Martabak mini adalah versi kecil dari martabak tradisional yang populer di Indonesia. Martabak ini dikenal dengan
+        ukurannya yang lebih kecil dan praktis, namun tetap kaya rasa. Dengan beragam varian, baik manis maupun gurih, martabak mini menjadi pilihan
+        camilan yang sempurna untuk berbagai kesempatan.</string>
+    <string name="milkcheese">Milkcheese adalah produk kuliner yang memadukan kelezatan susu dan keju dalam satu sajian. Dikenal karena teksturnya
+        yang lembut dan rasa yang creamy, milkcheese menawarkan sensasi kenikmatan yang unik dan menggugah selera. Produk ini sering digunakan sebagai
+        bahan dasar dalam berbagai hidangan penutup, roti, dan kue, memberikan sentuhan rasa gurih dan manis yang seimbang.</string>
+    <string name="pudingbuah">Puding buah adalah hidangan penutup yang menyegarkan dan lezat, terbuat dari campuran puding yang lembut dan potongan
+        buah-buahan segar. Kombinasi ini menciptakan harmoni rasa manis dan asam yang menggugah selera, serta memberikan tekstur yang menarik di
+        setiap gigitan. Puding buah sering disajikan dalam berbagai acara, karena selain rasanya byang enak, tampilannya yang berwarna-warni
+        juga menambah daya tarik visual.</string>
+    <string name="donatkentang">Donat kentang adalah variasi donat yang dibuat dengan mencampurkan kentang tumbuk ke dalam adonan, menghasilkan tekstur
+        yang lebih lembut dan empuk dibandingkan donat biasa. Dengan rasa yang sedikit manis dan aroma yang khas, donat kentang sering dihidangkan dengan
+        taburan gula halus atau aneka topping seperti cokelat, keju, dan kacang.</string>
+    <string name="rasa">Cita Rasa</string>
+    <string name="waktu">Waktu</string>
+    <string name="menit">30 Menit</string>
+    <string name="rating">4.9 dari 5.0</string>
+    <string name="instagram">Instagram</string>
+    <string name="bahan_baku">Bahan Baku</string>
+    <string name="nama_aplikasi">Nama Aplikasi</string>
+    <string name="cara_memasak">Cara Memasak</string>
+    <string name="tambah_produk">Tambah Produk</string>
+    <string name="informasi">Informasi</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="price">Price</string>
+    <string name="produk_unggulan">Produk Unggulan</string>
+    <string name="find_product">Temukan produk kesukaanmu kamu disini</string>
+    <string name="loading">Loading...</string>
+</resources>
