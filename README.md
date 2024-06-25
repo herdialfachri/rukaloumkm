@@ -15,7 +15,7 @@ Rukalo adalah sebuah aplikasi inovatif yang dirancang untuk mendukung pengembang
 - Firebase Realtime Database
 - Firebase Authentication
 - Firebase Storage
-#Tools & IDE
+# Tools & IDE
 - Canva
 - Figma
 - Android Studio
