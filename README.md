@@ -24,6 +24,6 @@ Rukalo adalah sebuah aplikasi inovatif yang dirancang untuk mendukung pengembang
 - Firebase
 - Git
 # UI/UX
-![image.png](uirukalo.png)
+![image.png](urukalo.png)
 # Flowchart
 ![image.jpg](flowrukalo.jpg)
