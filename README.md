@@ -23,5 +23,7 @@ Rukalo adalah sebuah aplikasi inovatif yang dirancang untuk mendukung pengembang
 - Google Font
 - Firebase
 - Git
+# UI/UX
+![image.png](uiukalo.png)
 # Flowchart
 ![image.jpg](flowrukalo.jpg)
