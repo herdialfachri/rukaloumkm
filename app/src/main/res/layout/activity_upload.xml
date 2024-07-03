@@ -12,7 +12,8 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/saveButton"
         android:orientation="vertical"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:layout_marginBottom="16dp"> <!-- Added marginBottom -->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -53,7 +54,8 @@
                 android:layout_marginTop="8dp"
                 android:text="Nama Produk"
                 android:textSize="14sp"
-                android:textColor="@color/black"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
                 android:fontFamily="@font/inter"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/uploadImage" />
@@ -82,7 +84,8 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/inter"
                 android:text="No. Whatsapp"
-                android:textColor="@color/black"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/uploadTopic" />
@@ -111,7 +114,8 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/inter"
                 android:text="Harga Produk"
-                android:textColor="@color/black"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/uploadDesc" />
@@ -140,7 +144,8 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/inter"
                 android:text="Nama Toko/Penjual"
-                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/uploadLang" />
@@ -168,8 +173,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/inter"
-                android:text="Deskripsi Product"
-                android:textColor="@color/black"
+                android:text="Deskripsi Produk"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/uploadSeller" />
@@ -198,7 +204,8 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/inter"
                 android:text="Alamat Penjual"
-                android:textColor="@color/black"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/uploadProductDesc" />
@@ -218,19 +225,20 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivAlamat" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <Button
         android:id="@+id/saveButton"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:layout_alignParentBottom="true"
         android:fontFamily="@font/inter"
-        android:text="Save"
+        android:text="Tambah"
         android:textSize="18sp"
         app:cornerRadius="20dp" />
 </RelativeLayout>
