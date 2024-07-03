@@ -1,168 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:scrollbars="none"
-    android:theme="@style/CustomTextViewStyle"
     tools:context=".ui.home.DetailActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:layout_above="@+id/detailDesc"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        android:theme="@style/CustomTextViewStyle">
 
-    <TextView
-        android:id="@+id/detailTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:text="Title"
-        android:textStyle="bold"
-        android:textSize="21sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/detailImage"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="8dp"
-        android:adjustViewBounds="true"
-        android:padding="8dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/rukalo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailTitle" />
-
-    <TextView
-        android:id="@+id/detailLang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/button_outline"
-        android:padding="17dp"
-        android:text="Harga"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/detailImage"
-        app:layout_constraintTop_toBottomOf="@+id/detailImage" />
-
-    <TextView
-        android:id="@+id/detailSeller"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/button_outline"
-        android:padding="17dp"
-        android:text="Penjual"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/detailLang"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/detailLang"
-        app:layout_constraintTop_toBottomOf="@+id/detailLang" />
-
-    <TextView
-        android:id="@+id/detailProduk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/button_outline"
-        android:padding="17dp"
-        android:text="Deskripsi Produk"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/detailSeller"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/detailSeller"
-        app:layout_constraintTop_toBottomOf="@+id/detailSeller" />
-
-    <TextView
-        android:id="@+id/detailAlamat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/button_outline"
-        android:padding="17dp"
-        android:text="Alamat"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/detailProduk"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/detailProduk"
-        app:layout_constraintTop_toBottomOf="@+id/detailProduk" />
-
-        <Button
-            android:id="@+id/detailDesc"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="16dp"
-            android:text="Beli Sekarang"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/detailAlamat"
-            app:layout_constraintStart_toStartOf="@+id/detailAlamat"
-            app:layout_constraintTop_toBottomOf="@+id/detailAlamat" />
+            android:layout_height="wrap_content">
 
-<!--    <RelativeLayout-->
-<!--        android:id="@+id/relativeLayout"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="120dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        tools:layout_editor_absoluteX="0dp">-->
+            <TextView
+                android:id="@+id/detailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="Title"
+                android:textStyle="bold"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-<!--        <com.github.clans.fab.FloatingActionMenu-->
-<!--            android:id="@+id/mainFab"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_alignParentEnd="true"-->
-<!--            android:layout_alignParentBottom="true"-->
-<!--            android:layout_marginEnd="20dp"-->
-<!--            android:layout_marginBottom="20dp"-->
-<!--            app:menu_colorNormal="@color/blue"-->
-<!--            app:menu_colorPressed="@color/blue"-->
-<!--            app:menu_fab_size="normal"-->
-<!--            app:menu_icon="@drawable/baseline_account_circle_24"-->
-<!--            app:menu_openDirection="up"-->
-<!--            app:menu_showShadow="true">-->
+            <ImageView
+                android:id="@+id/detailImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/rukalo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailTitle" />
 
-<!--            <com.github.clans.fab.FloatingActionButton-->
-<!--                android:id="@+id/editButton"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:src="@drawable/baseline_account_circle_24"-->
-<!--                app:fab_colorNormal="@color/blue"-->
-<!--                app:fab_showShadow="true"-->
-<!--                app:fab_size="mini" />-->
+            <TextView
+                android:id="@+id/detailLang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/button_outline"
+                android:padding="17dp"
+                android:text="Harga"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/detailImage"
+                app:layout_constraintTop_toBottomOf="@+id/detailImage" />
 
-<!--            <com.github.clans.fab.FloatingActionButton-->
-<!--                android:id="@+id/deleteButton"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:src="@drawable/baseline_account_circle_24"-->
-<!--                app:fab_colorNormal="@color/blue"-->
-<!--                app:fab_showShadow="true"-->
-<!--                app:fab_size="mini" />-->
+            <TextView
+                android:id="@+id/detailSeller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/button_outline"
+                android:padding="17dp"
+                android:text="Penjual"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/detailLang"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/detailLang"
+                app:layout_constraintTop_toBottomOf="@+id/detailLang" />
 
-<!--        </com.github.clans.fab.FloatingActionMenu>-->
+            <TextView
+                android:id="@+id/detailProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/button_outline"
+                android:padding="17dp"
+                android:text="Deskripsi Produk"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/detailSeller"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/detailSeller"
+                app:layout_constraintTop_toBottomOf="@+id/detailSeller" />
 
-<!--    </RelativeLayout>-->
+            <TextView
+                android:id="@+id/detailAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/button_outline"
+                android:padding="17dp"
+                android:text="Alamat"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/detailProduk"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/detailProduk"
+                app:layout_constraintTop_toBottomOf="@+id/detailProduk" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/detailDesc"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Beli Sekarang"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</RelativeLayout>
