@@ -47,7 +47,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         detailAlamat = findViewById(R.id.detailAlamat)
 //        deleteButton = findViewById(R.id.deleteButton)
 //        editButton = findViewById(R.id.editButton)
-
+//
 //        mainFab = findViewById(R.id.mainFab)
 
         intent.extras?.let { bundle ->
@@ -62,7 +62,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
             Glide.with(this).load(imageUrl).into(detailImage)
         }
 
-//        // Amati status autentikasi pengguna
+        // Amati status autentikasi pengguna
 //        val auth = FirebaseAuth.getInstance()
 //        val currentUser = auth.currentUser
 //        if (currentUser == null) {
@@ -72,7 +72,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
 //            // User sudah login, tampilkan FloatingActionMenu
 //            mainFab.visibility = View.VISIBLE
 //        }
-
+//
 //        deleteButton.setOnClickListener {
 //            val reference = FirebaseDatabase.getInstance().getReference("Product")
 //            val storage = FirebaseStorage.getInstance()
