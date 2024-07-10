@@ -35,20 +35,24 @@ class DashboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Inisialisasi RecyclerView dan SearchView dari layout
         recyclerView = view.findViewById(R.id.recyclerView)
         searchView = view.findViewById(R.id.search)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.setHasFixedSize(true)
 
+        // Inisialisasi adapter dan set ke RecyclerView
         myAdapter = FoodAdapter(searchList)
         recyclerView.adapter = myAdapter
 
+        // Mengamati perubahan data dari ViewModel
         viewModel.foodItems.observe(viewLifecycleOwner) { data ->
             lifecycleScope.launch {
                 updateData(data)
             }
         }
 
+        // Mengatur listener pada SearchView untuk menangani perubahan teks pencarian
         searchView.clearFocus()
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -64,6 +68,7 @@ class DashboardFragment : Fragment() {
             }
         })
 
+        // Mengatur aksi ketika item dalam adapter diklik
         myAdapter.onItemClick = {
             val intent = Intent(activity, DetailActivity2::class.java)
             intent.putExtra("android", it)
@@ -71,6 +76,7 @@ class DashboardFragment : Fragment() {
         }
     }
 
+    // Fungsi untuk memperbarui data dalam adapter
     private suspend fun updateData(data: List<FoodItem>) {
         withContext(Dispatchers.Default) {
             searchList.clear()
@@ -81,6 +87,7 @@ class DashboardFragment : Fragment() {
         }
     }
 
+    // Fungsi untuk memfilter data berdasarkan teks pencarian
     private suspend fun filterList(query: String?) {
         val searchText = query?.lowercase(Locale.getDefault()) ?: ""
         val filteredList = withContext(Dispatchers.Default) {
@@ -95,6 +102,7 @@ class DashboardFragment : Fragment() {
         }
     }
 
+    // Fungsi yang dipanggil ketika fragment dalam keadaan pause
     override fun onPause() {
         super.onPause()
         searchView.setQuery("", false)

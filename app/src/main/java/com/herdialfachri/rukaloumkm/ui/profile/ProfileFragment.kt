@@ -31,7 +31,7 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
+        // Inflate layout fragment dan ikat ke binding
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -39,9 +39,11 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Inisialisasi button logout dan progress bar
         val logoutButton = view.findViewById<Button>(R.id.btn_logout)
         val loadingKeluar = view.findViewById<ProgressBar>(R.id.loadingKeluar)
 
+        // Mengamati status login pengguna
         viewModel.isUserLoggedIn.observe(viewLifecycleOwner) { isLoggedIn ->
             if (isLoggedIn) {
                 binding.btnMasuk.visibility = View.GONE
@@ -52,25 +54,27 @@ class ProfileFragment : Fragment() {
             }
         }
 
+        // Fungsi logout ketika button logout ditekan
         logoutButton.setOnClickListener {
             loadingKeluar.visibility = View.VISIBLE
             lifecycleScope.launch {
-                delay(1300) // 1.3 detik
+                delay(1300) // Delay 1.3 detik
                 viewModel.logout()
             }
         }
 
+        // Mengamati event logout dan navigasi ke MainActivity
         viewModel.logoutEvent.observe(viewLifecycleOwner) {
             val intent = Intent(activity, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
 
-        // Fungsi agar ketika pindah ke fragment lain bottom nav di hide
+        // Menampilkan bottom navigation
         val bottomNav = activity?.findViewById<BottomNavigationView>(R.id.nav_view)
         bottomNav?.visibility = View.VISIBLE
 
-        // Fungsi berpindah dari setiap button ke fragment lain
+        // Navigasi ke fragment lain dari button
         binding.btnTentangAplikasi.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_navigation_profil_to_aboutFragment)
         )
@@ -84,11 +88,9 @@ class ProfileFragment : Fragment() {
             Navigation.createNavigateOnClickListener(R.id.action_navigation_profil_to_shareFragment)
         )
         binding.buttonTentangAplikasi.setOnClickListener {
-            // Menampilkan pesan "Fitur sedang dikembangkan"
             showToast("Fitur cara pakai aplikasi sedang dikembangkan")
         }
         binding.buttonHakCipta.setOnClickListener {
-            // Menampilkan pesan "Fitur sedang dikembangkan"
             showToast("Fitur hak cipta sedang dikembangkan")
         }
     }

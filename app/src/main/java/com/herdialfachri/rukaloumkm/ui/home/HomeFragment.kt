@@ -30,14 +30,15 @@ class HomeFragment : Fragment() {
     private var dataList = mutableListOf<DataClass>()
     private var originalList = mutableListOf<DataClass>()
 
+    // Fungsi onCreateView dipanggil untuk menginflate layout Fragment
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
+    // Fungsi onViewCreated dipanggil setelah View dibuat
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -46,21 +47,24 @@ class HomeFragment : Fragment() {
         searchView = view.findViewById(R.id.search)
         tvSelengkapnya = view.findViewById(R.id.tvMore)
 
+        // Mengatur layout manager untuk RecyclerView
         val gridLayoutManager = GridLayoutManager(requireContext(), 2)
         recyclerView.layoutManager = gridLayoutManager
 
         setupRecyclerView()
         setupViewModel()
 
-        // Monitor user authentication status
+        // Memantau status autentikasi pengguna
         val auth = FirebaseAuth.getInstance()
         val currentUser = auth.currentUser
         updateFabVisibility(currentUser)
 
+        // Menambahkan listener untuk perubahan status autentikasi
         auth.addAuthStateListener { firebaseAuth ->
             updateFabVisibility(firebaseAuth.currentUser)
         }
 
+        // Mengatur aksi klik untuk TextView tvSelengkapnya
         tvSelengkapnya.setOnClickListener {
             val url = "https://www.pemdespalasarigirang.id/#posts"
             val intent = Intent(Intent.ACTION_VIEW)
@@ -68,11 +72,13 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        // Mengatur aksi klik untuk FloatingActionButton fab
         fab.setOnClickListener {
             val intent = Intent(requireContext(), UploadActivity::class.java)
             startActivity(intent)
         }
 
+        // Mengatur listener untuk SearchView
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
@@ -85,20 +91,24 @@ class HomeFragment : Fragment() {
         })
     }
 
+    // Fungsi untuk mengupdate visibilitas FloatingActionButton berdasarkan status pengguna
     private fun updateFabVisibility(user: FirebaseUser?) {
         fab.visibility = if (user != null) View.VISIBLE else View.GONE
     }
 
+    // Fungsi onResume dipanggil saat Fragment menjadi aktif kembali
     override fun onResume() {
         super.onResume()
-        viewModel.refreshData() // Ensure data is updated when fragment becomes active again
+        viewModel.refreshData() // Memastikan data diperbarui saat fragment aktif kembali
     }
 
+    // Fungsi untuk mengatur RecyclerView dan adapter
     private fun setupRecyclerView() {
         adapter = MyAdapter(requireContext(), dataList)
         recyclerView.adapter = adapter
     }
 
+    // Fungsi untuk mengatur ViewModel dan mengamati perubahan data
     private fun setupViewModel() {
         viewModel.products.observe(viewLifecycleOwner) { products ->
             dataList.clear()
@@ -109,6 +119,7 @@ class HomeFragment : Fragment() {
         }
     }
 
+    // Fungsi untuk mencari data berdasarkan teks yang diinput di SearchView
     private fun searchList(text: String?) {
         val searchList = mutableListOf<DataClass>()
         text?.let {
@@ -123,9 +134,10 @@ class HomeFragment : Fragment() {
         adapter.notifyDataSetChanged()
     }
 
+    // Fungsi onDestroyView dipanggil saat View dari Fragment dihancurkan
     override fun onDestroyView() {
         super.onDestroyView()
-        // Ensure listener is removed when Fragment is destroyed
+        // Memastikan listener dihapus saat Fragment dihancurkan
         FirebaseAuth.getInstance().removeAuthStateListener { /* listener */ }
     }
 }

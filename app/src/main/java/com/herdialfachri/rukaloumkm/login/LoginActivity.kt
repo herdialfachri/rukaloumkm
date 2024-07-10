@@ -23,23 +23,32 @@ import com.herdialfachri.rukaloumkm.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 
+    // Deklarasi variabel untuk ProgressBar, binding, dan FirebaseAuth
     private lateinit var loadingProgressBar: ProgressBar
     private lateinit var binding: ActivityLoginBinding
     private lateinit var firebaseAuth: FirebaseAuth
 
+    // Fungsi onCreate dipanggil saat Activity dibuat
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Inisialisasi loadingProgressBar dan mengatur tampilan password sebagai bintang
         loadingProgressBar = findViewById(R.id.loadingProgressBar)
         val passwordEditText = binding.loginPassword
         passwordEditText.transformationMethod = PasswordTransformationMethod.getInstance()
 
+        // Inisialisasi FirebaseAuth
         firebaseAuth = FirebaseAuth.getInstance()
+
+        // Memeriksa apakah pengguna sudah login
         checkUserLoggedIn()
+
+        // Menyiapkan tombol login
         setupLoginButton()
 
+        // Mengatur aksi untuk tombol lupa kata sandi
         binding.forgotPassword.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             val view = layoutInflater.inflate(R.layout.dialog_forgot, null)
@@ -62,6 +71,7 @@ class LoginActivity : AppCompatActivity() {
             dialog.show()
         }
 
+        // Mengatur aksi untuk teks redirect ke pendaftaran
         binding.signupRedirectText.setOnClickListener {
             val phoneWhatsapp = "6282122506110"
             val dialWhatsappIntent = Intent(
@@ -72,6 +82,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    // Fungsi untuk memeriksa apakah pengguna sudah login
     private fun checkUserLoggedIn() {
         val currentUser = firebaseAuth.currentUser
         if (currentUser != null) {
@@ -83,6 +94,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    // Fungsi untuk membandingkan email dan mengirim email reset kata sandi
     private fun compareEmail(email: EditText, dialog: AlertDialog) {
         if (!Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches()) {
             Toast.makeText(this, "Masukan email yang valid", Toast.LENGTH_SHORT).show()
@@ -107,6 +119,7 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
+    // Fungsi untuk menyiapkan tombol login
     private fun setupLoginButton() {
         binding.loginButton.setOnClickListener {
             val email = binding.loginEmail.text.toString()
@@ -148,6 +161,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    // Fungsi untuk memeriksa apakah koneksi internet tersedia
     private fun isInternetAvailable(): Boolean {
         val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val network = connectivityManager.activeNetwork ?: return false

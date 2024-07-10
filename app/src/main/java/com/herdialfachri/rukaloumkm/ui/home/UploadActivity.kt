@@ -22,6 +22,7 @@ import java.util.*
 
 class UploadActivity : AppCompatActivity() {
 
+    // Deklarasi variabel untuk tampilan dan penyimpanan gambar
     private lateinit var uploadImage: ImageView
     private lateinit var uploadTopic: EditText
     private lateinit var uploadDesc: EditText
@@ -33,10 +34,12 @@ class UploadActivity : AppCompatActivity() {
     private var imageURL: String? = null
     private var uri: Uri? = null
 
+    // Fungsi onCreate dipanggil saat Activity dibuat
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upload)
 
+        // Inisialisasi tampilan
         uploadImage = findViewById(R.id.uploadImage)
         uploadTopic = findViewById(R.id.uploadTopic)
         uploadDesc = findViewById(R.id.uploadDesc)
@@ -46,6 +49,7 @@ class UploadActivity : AppCompatActivity() {
         uploadAlamat = findViewById(R.id.uploadAlamat)
         saveButton = findViewById(R.id.saveButton)
 
+        // Inisialisasi ActivityResultLauncher untuk memilih gambar
         val activityResultLauncher: ActivityResultLauncher<Intent> = registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
         ) { result ->
@@ -58,28 +62,33 @@ class UploadActivity : AppCompatActivity() {
             }
         }
 
+        // Aksi untuk memilih gambar saat ImageView diklik
         uploadImage.setOnClickListener {
             val photoPicker = Intent(Intent.ACTION_PICK)
             photoPicker.type = "image/*"
             activityResultLauncher.launch(photoPicker)
         }
 
+        // Aksi untuk menyimpan data saat tombol save diklik
         saveButton.setOnClickListener {
             saveData()
         }
     }
 
+    // Fungsi untuk menyimpan data ke Firebase Storage dan Database
     private fun saveData() {
         val storageReference: StorageReference = FirebaseStorage.getInstance().reference
             .child("Android Images")
             .child(uri?.lastPathSegment ?: return)
 
+        // Membuat dan menampilkan dialog progres
         val builder = AlertDialog.Builder(this)
         builder.setCancelable(false)
         builder.setView(R.layout.progress_layout)
         val dialog = builder.create()
         dialog.show()
 
+        // Mengupload file ke Firebase Storage
         uri?.let {
             storageReference.putFile(it).addOnSuccessListener { taskSnapshot ->
                 taskSnapshot.storage.downloadUrl.addOnCompleteListener { uriTask ->
@@ -97,6 +106,7 @@ class UploadActivity : AppCompatActivity() {
         }
     }
 
+    // Fungsi untuk membersihkan path agar aman digunakan di Firebase Database
     private fun sanitizePath(path: String): String {
         return path.replace(".", "")
             .replace("#", "")
@@ -108,6 +118,7 @@ class UploadActivity : AppCompatActivity() {
             .replace("?", "")
     }
 
+    // Fungsi untuk mengupload data ke Firebase Database
     private fun uploadData() {
         val title = uploadTopic.text.toString()
         val desc = uploadDesc.text.toString()

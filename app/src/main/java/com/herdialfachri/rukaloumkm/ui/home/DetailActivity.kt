@@ -27,9 +27,9 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var detailSeller: TextView
     private lateinit var detailProduk: TextView
     private lateinit var detailAlamat: TextView
-//    private lateinit var deleteButton: FloatingActionButton
-//    private lateinit var editButton: FloatingActionButton
-//    private lateinit var mainFab: FloatingActionMenu
+    //    private lateinit var deleteButton: FloatingActionButton
+    //    private lateinit var editButton: FloatingActionButton
+    //    private lateinit var mainFab: FloatingActionMenu
     private var key: String = ""
     private var imageUrl: String = ""
     private var whatsappNumber: String = ""
@@ -38,6 +38,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
+        // Inisialisasi view dari layout
         detailDesc = findViewById(R.id.detailDesc)
         detailTitle = findViewById(R.id.detailTitle)
         detailLang = findViewById(R.id.detailLang)
@@ -47,9 +48,9 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         detailAlamat = findViewById(R.id.detailAlamat)
 //        deleteButton = findViewById(R.id.deleteButton)
 //        editButton = findViewById(R.id.editButton)
-//
 //        mainFab = findViewById(R.id.mainFab)
 
+        // Mendapatkan data dari intent dan mengatur tampilan berdasarkan data tersebut
         intent.extras?.let { bundle ->
             whatsappNumber = bundle.getString("Description") ?: ""
             detailTitle.text = bundle.getString("Title")
@@ -59,10 +60,13 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
             detailSeller.text = bundle.getString("Seller")
             detailProduk.text = bundle.getString("Produk")
             detailAlamat.text = bundle.getString("Alamat")
-            Glide.with(this).load(imageUrl).into(detailImage)
+            Glide.with(this).load(imageUrl).into(detailImage) // Menggunakan Glide untuk memuat gambar
         }
 
-        // Amati status autentikasi pengguna
+        // Mengatur listener untuk tombol detailDesc
+        detailDesc.setOnClickListener(this)
+
+        // Amati status autentikasi pengguna dan sembunyikan/ tampilkan FloatingActionMenu berdasarkan status tersebut
 //        val auth = FirebaseAuth.getInstance()
 //        val currentUser = auth.currentUser
 //        if (currentUser == null) {
@@ -72,7 +76,8 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
 //            // User sudah login, tampilkan FloatingActionMenu
 //            mainFab.visibility = View.VISIBLE
 //        }
-//
+
+        // Mengatur listener untuk tombol deleteButton
 //        deleteButton.setOnClickListener {
 //            val reference = FirebaseDatabase.getInstance().getReference("Product")
 //            val storage = FirebaseStorage.getInstance()
@@ -85,7 +90,8 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
 //                finish()
 //            }
 //        }
-//
+
+        // Mengatur listener untuk tombol editButton
 //        editButton.setOnClickListener {
 //            val intent = Intent(this, UpdateActivity::class.java).apply {
 //                putExtra("Description", detailDesc.text.toString())
@@ -99,11 +105,9 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
 //            }
 //            startActivity(intent)
 //        }
-
-        // Set listener untuk tombol detailDesc
-        detailDesc.setOnClickListener(this)
     }
 
+    // Fungsi onClick untuk menangani klik pada tombol detailDesc
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.detailDesc -> {

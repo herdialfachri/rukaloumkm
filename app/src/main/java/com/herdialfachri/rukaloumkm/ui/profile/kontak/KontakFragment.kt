@@ -20,12 +20,13 @@ class KontakFragment : Fragment(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Inflate layout untuk fragment ini
         return inflater.inflate(R.layout.fragment_kontak, container, false)
     }
 
     override fun onStart() {
         super.onStart()
+        // Sembunyikan BottomNavigationView ketika fragment ini terlihat
         val bottomNav = activity?.findViewById<BottomNavigationView>(R.id.nav_view)
         bottomNav?.visibility = View.GONE
     }
@@ -33,6 +34,7 @@ class KontakFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Inisialisasi tombol dan set listener
         val email: Button = view.findViewById(R.id.btn_email)
         email.setOnClickListener(this)
 
@@ -45,7 +47,7 @@ class KontakFragment : Fragment(), View.OnClickListener {
         val facebook: Button = view.findViewById(R.id.btn_facebook)
         facebook.setOnClickListener(this)
 
-        // Mendapatkan referensi ke toolbar
+        // Mendapatkan referensi ke toolbar dan set listener untuk navigasi kembali
         val toolbar: Toolbar = view.findViewById(R.id.toolbar_kontak)
         toolbar.setNavigationOnClickListener {
             findNavController().navigateUp()
@@ -53,10 +55,11 @@ class KontakFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
-
+        // Menjalankan animasi ketika tombol diklik
         val animation = AnimationUtils.loadAnimation(context, R.anim.animasi)
         v.startAnimation(animation)
 
+        // Menangani klik berdasarkan id tombol
         when (v.id) {
             R.id.btn_email -> {
                 val namaEmail = "desapalasarigirang@gmail.com"
@@ -75,8 +78,8 @@ class KontakFragment : Fragment(), View.OnClickListener {
 
             R.id.btn_website -> {
                 val namaWebsite = "https://www.pemdespalasarigirang.id/"
-                val bukaWesbite = Intent(Intent.ACTION_VIEW, Uri.parse(namaWebsite))
-                startActivity(bukaWesbite)
+                val bukaWebsite = Intent(Intent.ACTION_VIEW, Uri.parse(namaWebsite))
+                startActivity(bukaWebsite)
             }
 
             R.id.btn_facebook -> {
