@@ -28,6 +28,7 @@ class MyAdapter(private val context: Context, private var dataList: List<DataCla
         holder.recTitle.text = currentItem.dataTitle
 //        holder.recDesc.text = currentItem.dataDesc
         holder.recLang.text = currentItem.dataLang
+        holder.recSeller.text = currentItem.dataSeller
 
         holder.recCard.setOnClickListener {
             val intent = Intent(context, DetailActivity::class.java).apply {
@@ -61,4 +62,5 @@ class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 //    val recDesc: TextView = itemView.findViewById(R.id.recDesc)
     val recLang: TextView = itemView.findViewById(R.id.recPriority)
     val recCard: CardView = itemView.findViewById(R.id.recCard)
+    val recSeller: TextView = itemView.findViewById(R.id.seller)
 }
