@@ -87,11 +87,11 @@ class ProfileFragment : Fragment() {
         binding.buttonUndang.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_navigation_profil_to_shareFragment)
         )
+        binding.buttonHakCipta.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_profil_to_hakFragment)
+        )
         binding.buttonTentangAplikasi.setOnClickListener {
-            showToast("Fitur cara pakai aplikasi sedang dikembangkan")
-        }
-        binding.buttonHakCipta.setOnClickListener {
-            showToast("Fitur hak cipta sedang dikembangkan")
+            showToast("Fitur ini sedang dikembangkan")
         }
     }
 

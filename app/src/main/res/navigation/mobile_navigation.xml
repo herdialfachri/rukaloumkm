@@ -58,6 +58,11 @@
         <action
             android:id="@+id/action_navigation_profil_to_loginActivity"
             app:destination="@id/loginActivity" />
+        <action
+            android:id="@+id/action_navigation_profil_to_hakFragment"
+            app:destination="@id/hakFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -89,4 +94,9 @@
         android:name="com.herdialfachri.rukaloumkm.ui.home.DetailActivity"
         android:label="activity_detail"
         tools:layout="@layout/activity_detail" />
+    <fragment
+        android:id="@+id/hakFragment"
+        android:name="com.herdialfachri.rukaloumkm.ui.profile.copyright.HakFragment"
+        android:label="fragment_hak"
+        tools:layout="@layout/fragment_hak" />
 </navigation>
