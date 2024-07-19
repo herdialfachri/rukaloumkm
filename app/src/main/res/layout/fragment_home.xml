@@ -24,7 +24,6 @@
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/lavender_border"
                 android:focusable="false"
-                android:theme="@style/CustomTextViewStyle"
                 app:closeIcon="@drawable/baseline_close_24"
                 app:iconifiedByDefault="false"
                 app:layout_constraintEnd_toEndOf="parent"
