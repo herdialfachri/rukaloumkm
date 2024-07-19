@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,9 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/saveButton"
-        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
         android:fillViewport="true"
-        android:layout_marginBottom="16dp"> <!-- Added marginBottom -->
+        android:orientation="vertical"> <!-- Added marginBottom -->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -52,11 +51,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:text="Nama Produk"
-                android:textSize="14sp"
-                android:textColor="@color/blue"
-                android:textStyle="bold"
                 android:fontFamily="@font/inter"
+                android:text="Nama Produk"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/uploadImage" />
 
@@ -85,8 +84,8 @@
                 android:fontFamily="@font/inter"
                 android:text="No. Whatsapp"
                 android:textColor="@color/blue"
-                android:textStyle="bold"
                 android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/uploadTopic" />
 
@@ -99,12 +98,14 @@
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/button_outline"
                 android:fontFamily="@font/inter"
-                android:hint="Contoh: 6282123455432"
+                android:hint="Contoh: 6285799008899"
+                android:inputType="numberDecimal"
                 android:padding="16dp"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivDesc" />
+
 
             <TextView
                 android:id="@+id/ivLang"
@@ -115,8 +116,8 @@
                 android:fontFamily="@font/inter"
                 android:text="Harga Produk"
                 android:textColor="@color/blue"
-                android:textStyle="bold"
                 android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/uploadDesc" />
 
@@ -129,7 +130,8 @@
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/button_outline"
                 android:fontFamily="@font/inter"
-                android:hint="Contoh: Rp.50.000/porsi"
+                android:hint="Contoh: 50.000"
+                android:inputType="numberDecimal"
                 android:padding="16dp"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -144,9 +146,9 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/inter"
                 android:text="Nama Toko/Penjual"
-                android:textStyle="bold"
                 android:textColor="@color/blue"
                 android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/uploadLang" />
 
@@ -175,8 +177,8 @@
                 android:fontFamily="@font/inter"
                 android:text="Deskripsi Produk"
                 android:textColor="@color/blue"
-                android:textStyle="bold"
                 android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/uploadSeller" />
 
@@ -205,8 +207,8 @@
                 android:fontFamily="@font/inter"
                 android:text="Alamat Penjual"
                 android:textColor="@color/blue"
-                android:textStyle="bold"
                 android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/uploadProductDesc" />
 
@@ -233,10 +235,10 @@
         android:id="@+id/saveButton"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:layout_alignParentBottom="true"
         android:fontFamily="@font/inter"
         android:text="Tambah"
         android:textSize="18sp"
