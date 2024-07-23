@@ -90,9 +90,9 @@ class ProfileFragment : Fragment() {
         binding.buttonHakCipta.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_navigation_profil_to_hakFragment)
         )
-        binding.buttonTentangAplikasi.setOnClickListener {
-            showToast("Fitur ini sedang dikembangkan")
-        }
+        binding.buttonTentangAplikasi.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_profil_to_caraPakaiFragment)
+        )
     }
 
     override fun onDestroy() {

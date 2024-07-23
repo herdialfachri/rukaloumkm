@@ -8,7 +8,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="selamat_datang">Selamat Datang</string>
     <string name="test">test</string>
-    <string name="profil_tv">Profile</string>
+    <string name="profil_tv">Profil</string>
     <string name="masuk_akun">Masuk akun</string>
     <string name="seputar_aplikasi">Seputar Aplikasi</string>
     <string name="hubungi_desa_palasari_girang">Hubungi Desa Palasari Girang</string>
@@ -124,7 +124,13 @@
     <string name="description">Description</string>
     <string name="price">Price</string>
     <string name="produk_unggulan">Produk Unggulan</string>
-    <string name="find_product">Temukan produk kesukaanmu kamu disini</string>
+    <string name="find_product">Temukan produk kesukaan kamu disini</string>
     <string name="loading">Loading...</string>
     <string name="selengkapnya">Selengkapnya..</string>
+    <string name="cara_masuk_akun">Bagaimana Cara Masuk Akun?</string>
+    <string name="cara_membeli_produk">Bagaimana Cara Membeli Produk?</string>
+    <string name="cara_reset_kata_sandi">Bagaimana Cara Reset Kata Sandi?</string>
+    <string name="cara_menambah_produkmu">Bagaimana Cara Menambah Produk?</string>
+    <string name="cara_menghubungi_desa">Bagaimana Cara Menghubungi Desa?</string>
+    <string name="bagaimana_cara_membuat_akun">Bagaimana Cara Membuat Akun?</string>
 </resources>

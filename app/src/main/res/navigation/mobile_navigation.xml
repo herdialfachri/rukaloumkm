@@ -63,6 +63,11 @@
             app:destination="@id/hakFragment"
             app:enterAnim="@anim/slide_right"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
+        <action
+            android:id="@+id/action_navigation_profil_to_caraPakaiFragment"
+            app:destination="@id/caraPakaiFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -99,4 +104,70 @@
         android:name="com.herdialfachri.rukaloumkm.ui.profile.copyright.HakFragment"
         android:label="fragment_hak"
         tools:layout="@layout/fragment_hak" />
+    <fragment
+        android:id="@+id/caraPakaiFragment"
+        android:name="com.herdialfachri.rukaloumkm.ui.profile.tutorial.CaraPakaiFragment"
+        android:label="fragment_cara_pakai"
+        tools:layout="@layout/fragment_cara_pakai" >
+        <action
+            android:id="@+id/action_caraPakaiFragment_to_caraLoginFragment"
+            app:destination="@id/caraLoginFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
+        <action
+            android:id="@+id/action_caraPakaiFragment_to_caraDaftarFragment"
+            app:destination="@id/caraDaftarFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
+        <action
+            android:id="@+id/action_caraPakaiFragment_to_caraBeliFragment"
+            app:destination="@id/caraBeliFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
+        <action
+            android:id="@+id/action_caraPakaiFragment_to_resetFragment"
+            app:destination="@id/resetFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
+        <action
+            android:id="@+id/action_caraPakaiFragment_to_tambahFragment"
+            app:destination="@id/tambahFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
+        <action
+            android:id="@+id/action_caraPakaiFragment_to_hubungiFragment"
+            app:destination="@id/hubungiFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/caraLoginFragment"
+        android:name="com.herdialfachri.rukaloumkm.ui.profile.tutorial.CaraLoginFragment"
+        android:label="fragment_cara_login"
+        tools:layout="@layout/fragment_cara_login" />
+    <fragment
+        android:id="@+id/caraDaftarFragment"
+        android:name="com.herdialfachri.rukaloumkm.ui.profile.tutorial.CaraDaftarFragment"
+        android:label="fragment_cara_daftar"
+        tools:layout="@layout/fragment_cara_daftar" />
+    <fragment
+        android:id="@+id/caraBeliFragment"
+        android:name="com.herdialfachri.rukaloumkm.ui.profile.tutorial.CaraBeliFragment"
+        android:label="fragment_cara_beli"
+        tools:layout="@layout/fragment_cara_beli" />
+    <fragment
+        android:id="@+id/resetFragment"
+        android:name="com.herdialfachri.rukaloumkm.ui.profile.tutorial.ResetFragment"
+        android:label="fragment_reset"
+        tools:layout="@layout/fragment_reset" />
+    <fragment
+        android:id="@+id/tambahFragment"
+        android:name="com.herdialfachri.rukaloumkm.ui.profile.tutorial.TambahFragment"
+        android:label="fragment_tambah"
+        tools:layout="@layout/fragment_tambah" />
+    <fragment
+        android:id="@+id/hubungiFragment"
+        android:name="com.herdialfachri.rukaloumkm.ui.profile.tutorial.HubungiFragment"
+        android:label="fragment_hubungi"
+        tools:layout="@layout/fragment_hubungi" />
 </navigation>
