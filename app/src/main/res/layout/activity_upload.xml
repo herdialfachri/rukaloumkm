@@ -185,7 +185,7 @@
             <EditText
                 android:id="@+id/uploadProductDesc"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="8dp"
@@ -194,9 +194,14 @@
                 android:hint="Mie Ayam adalah..."
                 android:padding="16dp"
                 android:textColor="@color/black"
+                android:minLines="4"
+                android:maxLines="6"
+                android:gravity="top"
+                android:inputType="textMultiLine"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivProduk" />
+
 
             <TextView
                 android:id="@+id/ivAlamat"
@@ -215,7 +220,7 @@
             <EditText
                 android:id="@+id/uploadAlamat"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="8dp"
@@ -224,9 +229,14 @@
                 android:hint="Contoh: Kampung Bojong"
                 android:padding="16dp"
                 android:textColor="@color/black"
+                android:minLines="4"
+                android:maxLines="6"
+                android:gravity="top"
+                android:inputType="textMultiLine"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivAlamat" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

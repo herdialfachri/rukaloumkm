@@ -26,6 +26,7 @@ class HomeFragment : Fragment() {
     private lateinit var adapter: MyAdapter
     private lateinit var searchView: SearchView
     private lateinit var tvSelengkapnya: TextView
+    private lateinit var rightText: TextView  // Tambahkan ini
     private val viewModel: HomeViewModel by viewModels()
     private var dataList = mutableListOf<DataClass>()
     private var originalList = mutableListOf<DataClass>()
@@ -46,6 +47,7 @@ class HomeFragment : Fragment() {
         fab = view.findViewById(R.id.fab)
         searchView = view.findViewById(R.id.search)
         tvSelengkapnya = view.findViewById(R.id.tvMore)
+        rightText = view.findViewById(R.id.rightText)  // Tambahkan ini
 
         // Mengatur layout manager untuk RecyclerView
         val gridLayoutManager = GridLayoutManager(requireContext(), 2)
@@ -116,6 +118,7 @@ class HomeFragment : Fragment() {
             originalList.clear()
             originalList.addAll(products)
             adapter.notifyDataSetChanged()
+            rightText.text = "${products.size} Makanan"  // Tambahkan ini
         }
     }
 
